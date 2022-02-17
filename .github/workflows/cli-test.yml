@@ -12,10 +12,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    services:
-     jfrog-container:
-      image: "releases-docker.jfrog.io/jfrog/jfrog-cli-v2-jf"
+    container:
+      image: releases-docker.jfrog.io/jfrog/jfrog-cli-v2-jf
     steps:
       - name : JFrog cli install and setup 
         run: |
